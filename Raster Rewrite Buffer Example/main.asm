@@ -1,7 +1,7 @@
-﻿; Raster Rewrite Buffer Bug
+﻿; Raster Rewrite Buffer Example
 
 !cpu m65
-!to "rrb_bug.prg", cbm
+!to "rrb_example.prg", cbm
 
 * = $2001
 
@@ -21,18 +21,7 @@
         ; TOTAL BYTES = 12500 ($30d4)
 
         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-        
-        ; Description of bug
-        ; 
-        ; LINESTEP is set to : 500
-        ; CHRCOUNT should be : LINESTEP / 2
-        ;
-        ; LINESTEP & CHRCOUNT registers, get set correctly
-        ;
-        ; But when CHRCOUNT, is set higher then 128, things get messed up. (This is in FCM mode)
-        
-        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-        
+    
         
         ;+disable H640
         lda #$80
@@ -55,7 +44,7 @@
         lda #$01
         sta $d059
      
-        ; set chrcount > 128  (Try changing this, to > 250 (linestep / 2 )
+        ; set chrcount > 128  
         lda #$80
         sta $d05e
         lda $d063
