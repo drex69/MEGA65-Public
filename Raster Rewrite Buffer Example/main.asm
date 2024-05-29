@@ -18,7 +18,7 @@
 !address  COLOUR_RAM = $ff080000
 
 !address  LINESTEP = $58                ; 88
-!address  CHRCOUNT = LINESTEP / 2       ; 2c
+!address  CHRCOUNT = LINESTEP / 2       ; 44
 !address  TOTAL_BYTES = ROWS * LINESTEP ; 898
         
         
