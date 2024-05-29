@@ -62,9 +62,7 @@
         ; fill screen & colour memory with '0' [898 bytes]
         +DMA_Job $03, TOTAL_BYTES, $01, $00000000, $01, SCREEN_MEM    ;screen 
         +DMA_Job $03, TOTAL_BYTES, $01, $00000000, $01, COLOUR_MEM    ;colour 
-        
-        ;rts
-        
+               
         ; fill base layer with 'char'
         !for i = 0 to 24
           
